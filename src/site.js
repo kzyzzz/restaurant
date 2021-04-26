@@ -23,8 +23,23 @@ const createNav = () => {
         menuItem.classList.add('menu-item');
 
         menuItem.textContent = item;
+        menuItem.id = item;
+
+        if (menuItem.id == "Home") menuItem.classList.add('menu-item-active');
 
         menuItem.addEventListener('click', (e) => {
+
+            let menuActive = document.querySelector('.menu-item-active');
+            if (menuActive) menuActive.classList.remove('menu-item-active');
+
+            e.target.classList.add('menu-item-active');
+
+            let main = document.querySelector('.main');
+            main.style.animation = 'none';
+
+            setTimeout(function() {
+                main.style.animation = '';
+            }, 1);
 
             switch (e.target.innerText) {
                 case 'Home':
@@ -32,14 +47,13 @@ const createNav = () => {
                     break;
 
                 case 'Menu':
-
+                    renderMenu();
                     break;
                 
                 case 'Contact':
                     renderContact();
                     break;                
-            }
-
+            };
         });
 
         menuUl.appendChild(menuItem);
@@ -58,15 +72,31 @@ const createMain = () => {
     return main;
 }
 
+const createFooter = () => {
+    let footer = document.createElement('footer');
+    footer.classList.add('footer');
+
+    let footerDiv = document.createElement('div');
+    footerDiv.textContent = 'Developed by Vladimir Baraev'
+
+    let links = document.createElement('div');
+    links.innerHTML = '<a href="https://github.com/kzyzzz"><i class="fa fa-github" aria-hidden="true"></i></a>';
+
+    footer.appendChild(footerDiv);
+    footer.appendChild(links);
+
+    return footer;
+}
+
 const renderSite = () => {
     let content = document.getElementById("content");
-    console.log(content)
 
     let container = createContainer();
     container.appendChild(createNav());
     container.appendChild(createMain());
+    container.appendChild(createFooter());
 
-    content.appendChild(container);
+    content.appendChild(container);    
 
     renderHome();
 

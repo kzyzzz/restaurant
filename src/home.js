@@ -6,14 +6,15 @@ const renderHome = () => {
     const header = document.createElement('h1');
     const text = document.createElement('p');
 
-    header.textContent = "Lorem ipsum";
-    text.textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
-    
+    header.textContent = "Lorem Ipsum Wine Bar";
+    text.textContent = ` Lorem ipsum is fueled by a collection of individuals passionate about creating a space for people to connect. 
+                         Our restaurants are an ode to our communities – providing familiar yet inspired surroundings, wine appropriate 
+                         for both the most casual and sacred of gatherings, and a menu that satisfies all your cravings. Our mission is to 
+                         make every moment that we’re a part of, one that leaves people feeling crazy-good.`;
+
     main.appendChild(header);
     main.appendChild(text);
+
 };
 
 export default renderHome;
