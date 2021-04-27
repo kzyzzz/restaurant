@@ -31,6 +31,7 @@ body {
 .container{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     max-width: 1400px;
     min-height: 100vh;
@@ -80,7 +81,6 @@ body {
 }
 
 .main {
-    margin: auto 0;
     padding: 2rem;
     background: black;
     width: 80%;
@@ -101,6 +101,7 @@ body {
 .menu-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    color: inherit;
 }
 .menu-item-card {
     display: flex;
@@ -109,6 +110,7 @@ body {
     justify-content: space-between;
     padding: 2rem;
     animation: fadeIn ease-in 0.5s; 
+    color: inherit;
 }
 .menu-item-header {
     font-size: 1.5rem;
@@ -125,10 +127,10 @@ body {
 }
 .menu-item-description {
     font-family: 'Open Sans', sans-serif;
- 
     font-size: 1rem;
     margin-bottom: 1rem;
-    color: var(--text-color);
+    color: inherit;
+
 }
 
 @keyframes drawLine {
@@ -158,7 +160,6 @@ body {
     .main {
         margin: 0;
         width: auto;
-        min-height: 80%;
         background: rgba(0, 0, 0, 0.8);
     }
 
