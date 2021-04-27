@@ -34,6 +34,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     max-width: 1400px;
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
@@ -84,19 +85,19 @@ body {
 .main {
     padding: 2rem;
     min-height: 60%;
-    animation: fadeIn ease-in 0.2s; 
     color: var(--text-color);
-    width: auto;
     background: rgba(0, 0, 0, 0.8);
 }
-.main h1 {
+.main h1, .contact h1 {
+    font-size: 3rem;
     margin-bottom: 1.3rem;
 }
 
-.main p {
+.main p, .contact div {
     color: inherit;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
+    animation: fadeIn ease-in 0.2s; 
 }
 
 .menu-container {
@@ -137,13 +138,30 @@ body {
 @keyframes drawLine {
     0% {width: 0;}
     100% {width: 50%;}
-  }
+}
 
 
 @keyframes fadeIn {
     0% {color: black;}
     100% {color: var(--text-color);}
-  }
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+.contact p {
+    margin-bottom: 1rem;
+}
+
+#map {
+    filter: brightness(0.8);
+    width: 100%;
+    height: auto;
+}
 
 .footer {
     display: flex;
@@ -175,5 +193,8 @@ body {
 
     .menu-container {
         grid-template-columns: 1fr 1fr;
+    }
+    .contact {
+        flex-direction: row;
     }
 }
