@@ -85,7 +85,7 @@ body {
     background: black;
     width: 80%;
     min-height: 60%;
-    animation: fadeIn ease-in 0.5s; 
+    animation: fadeIn ease-in 0.2s; 
     color: var(--text-color);
 }
 .main h1 {
@@ -109,7 +109,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
-    animation: fadeIn ease-in 0.5s; 
+    animation: fadeIn ease-in 0.2s; 
     color: inherit;
 }
 .menu-item-header {
@@ -156,7 +156,10 @@ body {
     padding-right: 2rem;
 }
 
-@media screen and (max-width: 900px)  {
+@media only screen and (max-width: 992px)  {
+    :root {
+        font-size: 36px;
+    }
     .main {
         margin: 0;
         width: auto;
