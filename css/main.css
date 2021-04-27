@@ -87,6 +87,7 @@ body {
     min-height: 60%;
     color: var(--text-color);
     background: rgba(0, 0, 0, 0.8);
+    width: 100%;
 }
 .main h1, .contact h1 {
     font-size: 3rem;
