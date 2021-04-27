@@ -10,7 +10,7 @@
 }
 
 :root {
-    font-size: xx-large;
+    font-size: 72px;
     --border-color: #aaa;
     --text-color: #ddd;
 }
@@ -159,7 +159,7 @@ body {
 
 @media only screen and (min-width: 600px) {
     :root {
-        font-size: x-large;
+        font-size: large;
     }
 }
 
