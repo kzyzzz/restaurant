@@ -10,7 +10,7 @@
 }
 
 :root {
-    font-size: 72px;
+    font-size: xx-large;
     --border-color: #aaa;
     --text-color: #ddd;
 }
@@ -157,7 +157,8 @@ body {
     padding-right: 2rem;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) 
+                   and (orientation : landscape) {
     :root {
         font-size: large;
     }
