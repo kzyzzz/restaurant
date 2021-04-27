@@ -10,6 +10,7 @@
 }
 
 :root {
+    font-size: xx-large;
     --border-color: #aaa;
     --text-color: #ddd;
 }
@@ -34,7 +35,7 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
-    min-height: 100%;
+    min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     font-size: 1.5rem;
 }
@@ -82,11 +83,11 @@ body {
 
 .main {
     padding: 2rem;
-    background: black;
-    width: 80%;
     min-height: 60%;
     animation: fadeIn ease-in 0.2s; 
     color: var(--text-color);
+    width: auto;
+    background: rgba(0, 0, 0, 0.8);
 }
 .main h1 {
     margin-bottom: 1.3rem;
@@ -100,7 +101,7 @@ body {
 
 .menu-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     color: inherit;
 }
 .menu-item-card {
@@ -156,19 +157,22 @@ body {
     padding-right: 2rem;
 }
 
-@media only screen and (max-width: 992px)  {
+@media only screen and (min-width: 600px) {
     :root {
-        font-size: 36px;
-    }
-    .main {
-        margin: 0;
-        width: auto;
-        background: rgba(0, 0, 0, 0.8);
-    }
-
-    .menu-container {
-        display: grid;
-        grid-template-columns: 1fr;
+        font-size: x-large;
     }
 }
 
+@media only screen and (min-width: 992px) {
+    :root {
+        font-size: medium;
+    }
+    .main {
+        background: black;
+        width: 80%;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
