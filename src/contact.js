@@ -10,7 +10,7 @@ const renderContact = () => {
     const leftText = document.createElement('div'); 
 
     const map = document.createElement('img');
-    map.src = '../dist/img/map.png';
+    map.src = '../img/map.png';
     map.id = 'map';
     leftText.appendChild(map);
 
